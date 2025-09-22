@@ -16,7 +16,7 @@ public class Main {
           for(int j=0;j<matrix[0].length;j++)
             System.out.print(matrix[i][j]+" ");
 
-
+    int mat = 
     
 
   }
@@ -27,8 +27,8 @@ public class Main {
     int n = matrix[0].length;
 
       int i = 0;
-    int j=n-1;
-    while(i<m && j>=0){
+        int j=n-1;
+      while(i<m && j>=0){
       if(matrix[i][j]==target){
         return true;
       }
@@ -38,9 +38,11 @@ public class Main {
       else{
         i++;
       }
-      return false;
+  
   }
 
+    return false;
+  }
 
   
 
