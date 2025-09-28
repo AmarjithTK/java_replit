@@ -4,21 +4,41 @@
 
 public class Main {
   public static void main(String[] args) {
-    System.out.println("Hello world peple!");
-    System.out.println("This feels awesome and interseting");
-    System.out.println("if feels to me that I should stick to java for backend roles and stick to what we choose to do, rather than changing goals and posts here and there");
+ 
 
 
+    llpractice();
+      
 
-        int matrix[][] = {{1,2,3},{4,5,6},{7,8,9}};
-        imagerotation(matrix);
-        for(int i=0;i<matrix.length;i++)
-          for(int j=0;j<matrix[0].length;j++)
-            System.out.print(matrix[i][j]+" ");
+  }
 
-    int mat = 
+
+  public static void llpractice(){
+      node dummy = new node(-1);
+      node tail = dummy;
+      int arr[] = {1,2,3,4,5,6,7,8,9,10};
+
+     for(int num:arr){
+       node temp = new node(num);
+      tail.next=temp;
+       tail=tail.next;
+     
+     }
+    node head = dummy.next;
+    dummy=dummy.next;
+
+    // head and dummy are the same;
+    
+    while(head!=null){
+      System.out.println(head.data+" is the data ");
+      head=head.next;
+    }
+
+    int value=10;
+
     
 
+    
   }
 
 
