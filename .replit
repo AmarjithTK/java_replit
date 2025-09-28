@@ -66,3 +66,26 @@ deploymentTarget = "cloudrun"
 
 [agent]
 expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Java Project"
+
+[[workflows.workflow]]
+name = "Java Project"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd src/main/java && javac linkedlist/*.java && java linkedlist.llv1"
+
+[workflows.workflow.metadata]
+outputType = "console"

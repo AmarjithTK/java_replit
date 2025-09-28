@@ -2,6 +2,8 @@
 
 // import org.junit.jupiter.api.Test;
 
+package linkedlist;
+
 public class Main {
   public static void main(String[] args) {
  
@@ -13,33 +15,7 @@ public class Main {
   }
 
 
-  public static void llpractice(){
-      node dummy = new node(-1);
-      node tail = dummy;
-      int arr[] = {1,2,3,4,5,6,7,8,9,10};
-
-     for(int num:arr){
-       node temp = new node(num);
-      tail.next=temp;
-       tail=tail.next;
-     
-     }
-    node head = dummy.next;
-    dummy=dummy.next;
-
-    // head and dummy are the same;
-    
-    while(head!=null){
-      System.out.println(head.data+" is the data ");
-      head=head.next;
-    }
-
-    int value=10;
-
-    
-
-    
-  }
+  
 
 
   private static boolean searchinsortedmatrix(int matrix[][],int target){
