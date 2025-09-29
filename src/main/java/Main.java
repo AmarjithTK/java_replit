@@ -2,87 +2,70 @@
 
 // import org.junit.jupiter.api.Test;
 
-package linkedlist;
+import dsa.linkedlist.*;
 
 public class Main {
   public static void main(String[] args) {
- 
 
+    // llv1.llpractice();
 
-    llpractice();
-      
+    System.out.println("hello world");
+
+    reversefromend.main(null);
+
+    
 
   }
 
-
-  
-
-
-  private static boolean searchinsortedmatrix(int matrix[][],int target){
-      int m = matrix.length;
+  private static boolean searchinsortedmatrix(int matrix[][], int target) {
+    int m = matrix.length;
     int n = matrix[0].length;
 
-      int i = 0;
-        int j=n-1;
-      while(i<m && j>=0){
-      if(matrix[i][j]==target){
+    int i = 0;
+    int j = n - 1;
+    while (i < m && j >= 0) {
+      if (matrix[i][j] == target) {
         return true;
-      }
-      else if(matrix[i][j]>target){
+      } else if (matrix[i][j] > target) {
         j--;
-    }
-      else{
+      } else {
         i++;
       }
-  
-  }
+
+    }
 
     return false;
   }
 
-  
-
-  private static void imagerotation(int matrix[][]){
+  private static void imagerotation(int matrix[][]) {
 
     int m = matrix.length;
     int n = matrix[0].length;
     int temp = 0;
 
-    for(int i=0;i<m;i++){
-      for(int j=i+1;j<n;j++){
-
+    for (int i = 0; i < m; i++) {
+      for (int j = i + 1; j < n; j++) {
 
         temp = matrix[i][j];
         matrix[i][j] = matrix[j][i];
         matrix[j][i] = temp;
 
-        
       }
     }
 
-
     // swap
 
-
-    for(int i=0;i<m;i++){
-      for(int j=0;j<n/2;j++){
+    for (int i = 0; i < m; i++) {
+      for (int j = 0; j < n / 2; j++) {
         temp = matrix[i][j];
-      matrix[i][j] = matrix[i][n-1-j];
-      matrix[i][n-1-j] = temp;}
+        matrix[i][j] = matrix[i][n - 1 - j];
+        matrix[i][n - 1 - j] = temp;
+      }
     }
-    
-      
+
   }
 
-  private static void addiction() {
-    // System.out.println("moobile addiction is bad for you, learn AVRT and other
-    // urge surfing");
-  }
 
-  // @Test
-  // void addition() {
-  // assertEquals(2, 1 + 1);
-  // }
+
 }
 
-// class solution()

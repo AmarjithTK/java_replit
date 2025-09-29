@@ -60,7 +60,14 @@ classPaths = ["."]
 mainClass = "Main"
 
 [deployment]
-build = ["javac", "-classpath", ".:target/dependency/*", "-d", ".", "$(find . -type f -name '*.java')"]
+build = [
+  "javac",
+  "-classpath",
+  ".:target/dependency/*",
+  "-d",
+  ".",
+  "$(find . -type f -name '*.java')",
+]
 run = ["java", "-classpath", ".:target/dependency/*", "Main"]
 deploymentTarget = "cloudrun"
 
@@ -85,7 +92,7 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd src/main/java && javac linkedlist/*.java && java linkedlist.llv1"
+args = "cd src/main/java && javac Main.java && java Main"
 
 [workflows.workflow.metadata]
 outputType = "console"
