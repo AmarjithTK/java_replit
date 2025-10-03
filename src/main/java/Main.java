@@ -4,19 +4,20 @@
 
 import dsa.linkedlist.*;
 import dsa.stack.llstack;
+import dsa.tree.binarytree;
 
 public class Main {
   public static void main(String[] args) {
 
     // llv1.llpractice();
 
-    llstack.main(null);
+    // llstack.main(null);
 
-    System.out.println("hello world");
+    // System.out.println("hello world");
 
-    reversefromend.main(null);
+    // reversefromend.main(null);
 
-    
+    binarytree.main(null);
 
     
 
